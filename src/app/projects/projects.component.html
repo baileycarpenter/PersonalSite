@@ -1,0 +1,535 @@
+<div class="container page-container">
+  <div class="row text-center justify-content-center">
+    <div class="col-md-8">
+      <p class="p-lead mb-3">Projects</p>
+      <h1>The Sample Room</h1>
+      <p class="lead">Check out a few samples of my work</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-sm-12 col-md-10">
+              <div class="card-title">
+                <h3>John Brooks Engineering</h3>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="card-header-fa-icons">
+                <a class="pr-1" href="#" data-toggle="modal" data-target="#modal-john-brooks"><i class="far fa-images fa-2x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Java, MySQL</h6>
+          <p class="card-text">
+          <p><strong>Third year internship</strong> Java application to automate the process for selecting the correct
+            sized couplings to connect a gear box to a specific conveyor belt motor based on factors such as torque
+            (the amount of force needed to move an object), speed, friction and weight. Data for this application was
+            stored on a local MySQL database which connected to the Java client which was made to be used cross-platform.</p>
+
+          <p>The design analysis and techniques of the project included UML using Visual Paradigm to layout the DB entities
+            before they were put into development, the Software Development Life Cycle methodology, unit testing in jUnit,
+            Agile project management using SCRUM to manage development phases as well as documentation which had to be signed off by the client.</p>
+          <ul>
+            <li>Static table on GUI to guide the user of the boundaries between the different ratios of tourqe, speed and
+              friction of a motor and gearbox</li>
+            <li>Calculations are stored in a centralized MySQL DB</li>
+            <li>User has the option to make print outs of past calculations for review</li>
+          </ul>
+          <p></p>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#modal-john-brooks">Images</a>
+          <a href="../../assets/images/projects/johnbrooks/Poster.jpg" target="_blank" class="card-link">Spec sheet</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-sm-12 col-md-10">
+              <div class="card-title">
+                <h3>starwars-character-names (npm pkg & JS Library)</h3>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="card-header-fa-icons">
+                <a  class="pr-1" href="https://github.com/keilcarpenter/starwars-character-names" target="_blank">&nbsp;
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.npmjs.com/package/starwars-character-names" target="_blank">
+                  <i class="fab fa-npm fa-2x"></i>&nbsp;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Javascript</h6>
+          <p class="card-text">
+            starwars-character-names is a JS library published to npm. Its purpose is to provide the user an easy API for getting random names of starwars characters</p>
+          <h5>Build tools</h5>
+          <ul>
+            <li>Testing: mocha, chai</li>
+            <li>Release: semantic-release & commitizen</li>
+            <li>Build: Webpack</li>
+            <li>Intergration: Travis CI</li>
+          </ul>
+          <h5>Install</h5>
+          <div class="code-block">
+           <pre class="pre-scrollable"><code>
+npm install --save starwars-character-names
+           </code></pre>
+          </div>
+          <h5>Usage</h5>
+          <div class="code-block">
+           <pre class="pre-scrollable"><code>
+// require module
+var starWarsNames = require('starwars-character-names');
+
+// returns an array of all names
+var allNames = starWarsNames.filter.all;
+
+// returns single random name
+var randomName = starWarsNames.filter.random();
+
+// returns an array of n number of names
+var fourNames = starWarsNames.filter.random(number);
+
+// returns array of names with the first name beginning with user defined char
+var firstNamesByChar = starWarsNames.filter.byFirstCharOfFirstName(char);
+
+// returns array of names with the second name beginning with user defined char
+var secondNamesByChar = starWarsNames.filter.byFirstCharOfSecondName(char);
+           </code></pre>
+          </div>
+          <p></p>
+          <a class="card-link" href="https://github.com/keilcarpenter/starwars-character-names" target="_blank">Github</a>
+          <a class="card-link" href="https://www.npmjs.com/package/starwars-character-names" target="_blank">npm</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-sm-12 col-md-10">
+              <div class="card-title">
+                <h3>Messenger</h3>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="card-header-fa-icons">
+                <a  class="pr-1" href="https://github.com/keilcarpenter/messenger" target="_blank">
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="#" data-toggle="modal" data-target="#modal-messenger">
+                  <i class="far fa-images fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Angular, Node, Express, MongoDB</h6>
+          <p class="card-text">A messaging app in Node, Angular and MongoDB which allows users to sign up for an account and begin instant messaging on the public fourm.</p>
+          <ul>
+            <li>Credentials hashed and salted (SHA)</li>
+            <li>Web Tokens to validate auth</li>
+            <li>Lazy loading of component modules</li>
+          </ul>
+          <p></p>
+          <a href="#" class="card-link" data-toggle="modal" data-target="#modal-messenger">Images</a>
+          <a class="card-link" href="https://github.com/keilcarpenter/messenger" target="_blank">Github</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-sm-12 col-md-10">
+              <div class="card-title">
+                <h3>Responsive Recipe Book</h3>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="card-header-fa-icons">
+                <a  class="pr-1" href="https://github.com/keilcarpenter/recipe-book" target="_blank">
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="#" data-toggle="modal" data-target="#modal-recipe-book">
+                  <i class="far fa-images fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Angular, Node, Express, MongoDB</h6>
+          <p class="card-text">A responsive and scalable recipe book that allows users to create and store their own recipes for future use.</p>
+          <ul>
+            <li>CRUD ops from client to Firebase DB</li>
+          </ul>
+          <a href="#" class="card-link" data-toggle="modal" data-target="#modal-recipe-book">Images</a>
+          <a href="https://github.com/keilcarpenter/recipe-book" target="_blank" class="card-link">View on Github</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-sm-12 col-md-10">
+              <div class="card-title">
+                <h3>Tasky</h3>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="card-header-fa-icons">
+                <a  class="pr-1" href="https://github.com/keilcarpenter/tasky" target="_blank">
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="#" data-toggle="modal" data-target="#modal-tasky">
+                  <i class="far fa-images fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Electron</h6>
+          <p class="card-text">Cross platform task manager for Windows, OSX and Linux</p>
+          <ul>
+            <li>No thread throtteling when app is in background mode</li>
+            <li>Change default timeout values for each task</li>
+            <li>Cross platform (Windows, OSX, iOS and linux)</li>
+            <li>Activate/deactivate tasks</li>
+          </ul>
+          <p></p>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#modal-tasky">Images</a>
+          <a href="https://github.com/keilcarpenter/tasky" target="_blank" class="card-link">View on Github</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-sm-12 col-md-10">
+              <div class="card-title">
+                <h3>Monopoly</h3>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="card-header-fa-icons">
+                <a  class="pr-1" href="https://github.com/keilcarpenter/monopoly" target="_blank">
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="#" data-toggle="modal" data-target="#modal-monopoly">
+                  <i class="far fa-images fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">C#</h6>
+          <p class="card-text">Console based version of the board game Monopoly</p>
+          <ul>
+            <li>Conduct unit tests on all classes in monopoly game using nUnit framework and produce average of 75% code coverage for overall codebase</li>
+          </ul>
+          <p></p>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#modal-monopoly">Images</a>
+          <a href="https://github.com/keilcarpenter/monopoly" target="_blank" class="card-link">View on Github</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-sm-12 col-md-10">
+              <div class="card-title">
+                <h3>Battleships</h3>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="card-header-fa-icons">
+                <a  class="pr-1" href="https://github.com/keilcarpenter/monopoly" target="_blank">
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="#" data-toggle="modal" data-target="#modal-monopoly">
+                  <i class="far fa-images fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">C#</h6>
+          <p class="card-text">.NET Windows Forms version of the game Battleships</p>
+          <p></p>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#modal-battleships">Images</a>
+          <a href="https://github.com/keilcarpenter/battleships" target="_blank" class="card-link">View on Github</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--modals-->
+
+  <!--messenger-->
+  <div class="modal" id="modal-messenger">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Messenger</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-row">
+            <div class="row project-images-container">
+              <div class="col-md-6">
+                <h5>User signs up</h5>
+                <img style="display: block;" src="../../assets/images/projects/messenger/signup.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <h5>User signs in</h5>
+                <img style="display: block;" src="../../assets/images/projects/messenger/signin.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <h5>Messaging interface</h5>
+                <img style="display: block;" src="../../assets/images/projects/messenger/messenger.JPG" class="img-fluid" alt="Card image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--recipe book-->
+  <div class="modal" id="modal-recipe-book">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Recipe Book</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-row">
+            <div class="row project-images-container">
+              <div class="col-md-6">
+                <h5>Select a recipe</h5>
+                <img style="display: block;" src="../../assets/images/projects/recipebook/select-recipe.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <h5>Add/edit selected recipe</h5>
+                <img style="display: block;" src="../../assets/images/projects/recipebook/add-recipe.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <h5>Shopping list</h5>
+                <img style="display: block;" src="../../assets/images/projects/recipebook/shoppinglist.JPG" class="img-fluid" alt="Card image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--battleships-->
+  <div class="modal" id="modal-battleships">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Battleships</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-row">
+            <div class="row">
+              <div class="col-md-12">
+                <h5>Game play</h5>
+                <ul>
+                  <li>Associated label colour changes to red to indicate ship has sunk</li>
+                  <li>Stats update to reflect total shots fired, ships destroyed etc...</li>
+                  <li>Green square indicates miss</li>
+                  <li>Red square indicates hit</li>
+                </ul>
+                <img style="display: block;" src="../../assets/images/projects/battleships/img1.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-12">
+                <h5>End of game</h5>
+                <ul>
+                  <li>Final end of game stats displayed</li>
+                </ul>
+                <img style="display: block;" src="../../assets/images/projects/battleships/win.JPG" class="img-fluid" alt="Card image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--monopoly-->
+  <div class="modal" id="modal-monopoly">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Monopoly</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-row">
+            <div class="row project-images-container">
+              <div class="col-md-6">
+                <p>First instance options</p>
+                <img style="display: block;" src="../../assets/images/projects/monopoly/init.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <p>Player x makes a move</p>
+                <img style="display: block;" src="../../assets/images/projects/monopoly/makeamove.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <p>Player details view</p>
+                <img style="display: block;" src="../../assets/images/projects/monopoly/player-details.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <p>Player y makes a move</p>
+                <img style="display: block;" src="../../assets/images/projects/monopoly/player-colours.JPG" class="img-fluid" alt="Card image">
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--john-brooks-->
+  <div class="modal" id="modal-john-brooks">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">John Brooks</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-row">
+            <div class="row project-images-container">
+              <div class="col-md-12">
+                <h5>Main GUI</h5>
+                <img style="display: block;" src="../../assets/images/projects/johnbrooks/maingui.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-12">
+                <h5>Validation</h5>
+                <img style="display: block;" src="../../assets/images/projects/johnbrooks/validation.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-12">
+                <h5>Service factor table</h5>
+                <img style="display: block;" src="../../assets/images/projects/johnbrooks/table.JPG" class="img-fluid" alt="Card image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--tasky-->
+  <div class="modal" id="modal-tasky">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Tasky</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-row">
+            <div class="row project-images-container">
+              <div class="col-md-6">
+                <h5>Main view</h5>
+                <img style="display: block;" src="../../assets/images/projects/tasky/alltasks.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <h5>Current task</h5>
+                <img style="display: block;" src="../../assets/images/projects/tasky/currenttask.JPG" class="img-fluid" alt="Card image">
+              </div>
+              <div class="col-md-6">
+                <h5>Settings</h5>
+                <img style="display: block;" src="../../assets/images/projects/tasky/settings.JPG" class="img-fluid" alt="Card image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
