@@ -9,6 +9,6 @@ export class ContactService {
 
   sendEmail(queryObject: any) {
     const body = JSON.stringify(queryObject);
-    return this.http.post('https://keilcarpenter-portfolio-api.herokuapp.com/api/sendemail', body, {observe: 'response'})
+    return this.http.post('https://keilcarpenter-portfolio-api.herokuapp.com/api/sendemail', body, {observe: 'response'});
   }
 }

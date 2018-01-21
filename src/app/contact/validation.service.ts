@@ -15,9 +15,5 @@ export class ValidationService {
     if (control.value.match(/[0-9]/)) {
       return {invalidName: true};
     }
-
-    /*setErrorColour(){
-
-    }*/
   }
 }

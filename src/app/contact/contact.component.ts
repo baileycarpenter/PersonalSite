@@ -2,9 +2,9 @@ import {Component} from '@angular/core';
 import {FormGroup, FormBuilder, Validators, Form} from '@angular/forms';
 import {ValidationService} from './validation.service';
 import {ContactService} from './contact.service';
-import {Router} from '@angular/router';
 import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
 import {Error} from 'tslint/lib/error';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-contact',
