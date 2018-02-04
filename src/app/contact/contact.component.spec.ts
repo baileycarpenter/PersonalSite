@@ -7,16 +7,19 @@ import {ValidationService} from './validation.service';
 import {ContactService} from './contact.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {HttpResponse, HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/empty';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
   let httpMock: HttpTestingController;
-
+// service stubs for testing
+  const validationServiceStub = {};
+  let service: ContactService;
   beforeEach(async(() => {
-    // service stubs for testing
-    const validationServiceStub = {};
-    const contactServiceStub = {};
+
+    service = new ContactService(null);
 
     TestBed.configureTestingModule({
       declarations: [ ContactComponent ],
@@ -25,31 +28,28 @@ describe('ContactComponent', () => {
       providers: [
         FormBuilder,
         { provide: ValidationService, useValue: validationServiceStub },
-        { provide: ContactService, useValue: contactServiceStub }
+        { provide: ContactService, useValue: service }
       ]
     })
     .compileComponents();
   }));
 
-  beforeEach(
-    async(
-      inject([HttpTestingController], _httpMock => {
-        fixture = TestBed.createComponent(ContactComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-        httpMock = _httpMock;
-      })
-    )
+  beforeEach(() => {
+      fixture = TestBed.createComponent(ContactComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    }
   );
-
-  afterEach(
-    inject([HttpTestingController], (httpMock: HttpTestingController) => {
-      httpMock.verify();
-    })
-  );
-
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call sendEmail method on ContactService', () => {
+    const spy = spyOn(service, 'sendEmail').and.callFake(() => {
+      return Observable.empty();
+    });
+    component.onSubmit({});
+    expect(spy).toHaveBeenCalled();
   });
 });

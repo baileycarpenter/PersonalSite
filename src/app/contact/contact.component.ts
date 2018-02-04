@@ -42,9 +42,9 @@ export class ContactComponent {
     });
   }
 
-  onSubmit(form: Form) {
+  onSubmit(message: object) {
     this.formIsProcessing = true;
-    this.contactService.sendEmail(form).subscribe(
+    this.contactService.sendEmail(message).subscribe(
       (data: HttpResponse<boolean>) => {this.handleResponse(data)},
       (err: HttpErrorResponse) => {this.handleError(err)}
     );

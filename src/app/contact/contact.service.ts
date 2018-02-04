@@ -11,4 +11,9 @@ export class ContactService {
     const body = JSON.stringify(queryObject);
     return this.http.post('https://keilcarpenter-portfolio-api.herokuapp.com/api/sendemail', body, {observe: 'response'});
   }
+
+  sendEemail(queryObject: any) {
+    const body = JSON.stringify(queryObject);
+    return this.http.post('https://keilcarpenter-portfolio-api.herokuapp.com/api/sendemail', body, {observe: 'response'});
+  }
 }
