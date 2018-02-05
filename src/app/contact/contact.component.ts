@@ -13,7 +13,8 @@ import {Router} from '@angular/router';
 })
 export class ContactComponent {
   formIsProcessing: boolean;
-  messageWasSent: number;
+  data: object;
+  status: number;
   contactForm: FormGroup;
 
   constructor(private router: Router, private formBuilder: FormBuilder, private validationService: ValidationService, private contactService: ContactService) {
@@ -25,7 +26,7 @@ export class ContactComponent {
   }
 
   createForm(){
-    this.messageWasSent = null;
+    this.status = null;
     this.formIsProcessing = false;
     this.contactForm = this.formBuilder.group({
       'name': ['', Validators.compose([
@@ -46,22 +47,16 @@ export class ContactComponent {
     this.formIsProcessing = true;
     this.contactService.sendEmail(message).subscribe(
       (data: HttpResponse<boolean>) => {this.handleResponse(data)},
-      (err: HttpErrorResponse) => {this.handleError(err)}
+      (err: Error) => {this.handleError(err)}
     );
   }
 
-  handleError(err: HttpErrorResponse){
-    if (err.error instanceof Error){
-      // A client-side or network error occurred. Handle it accordingly.
-      console.log('An error occurred: ', err.error.message);
-    } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong,
-      console.log('Backend returned code: ', err.message, 'body was: ', err.error)
-    }
+  handleError(err: Error){
+    console.log('An error occurred: ', err);
   }
 
   handleResponse(data){
-    this.messageWasSent = data.status;
+    this.data = data;
+    this.status = data.status;
   }
 }

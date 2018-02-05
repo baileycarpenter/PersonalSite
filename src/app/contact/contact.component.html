@@ -30,7 +30,7 @@
           <div *ngIf="!contactForm.controls['message'].valid && contactForm.controls['message'].touched" class="alert alert-danger"><strong>Warning! </strong>Please enter a message</div>
         </div>
       </div>
-      <div class="row justify-content-center mt-2" *ngIf="messageWasSent == null" id="button-block">
+      <div class="row justify-content-center mt-2" *ngIf="status == null" id="button-block">
         <div class="col-md-8">
           <div class="form-buttons float-left">
             <button type="button" (click)="onReset()" class="btn btn-warning">Cancel</button>
@@ -45,10 +45,10 @@
   </form>
   <div class="row justify-content-center post-message mt-2">
     <div class="col-md-8">
-      <div class="alert alert-success"*ngIf="messageWasSent == 200">
+      <div class="alert alert-success"*ngIf="status == 200">
         <strong>Sweet!</strong> Your message has been sent! I will get back to you ASAP :)
       </div>
-      <div class="alert alert-danger" *ngIf="messageWasSent != 200 && status != null">
+      <div class="alert alert-danger" *ngIf="status != 200 && status != null">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <strong>Dammit!</strong> Something went wrong, please try again later
       </div>
