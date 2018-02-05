@@ -48,7 +48,7 @@ describe('ContactComponent', () => {
       expect(component.contactForm.contains('name')).toBeTruthy();
     });
     it('should contain \'email\' control', () => {
-      expect(component.contactForm.contains('email')).toBeTruthy(;
+      expect(component.contactForm.contains('email')).toBeTruthy();
     });
     it('should contain \'message\' control', () => {
       expect(component.contactForm.contains('email')).toBeTruthy();
@@ -97,6 +97,7 @@ describe('ContactComponent', () => {
       component.onSubmit({});
       expect(spyService).toHaveBeenCalled();
     });
+
     it('should set \'status\' value', () => {
       spyOn(service, 'sendEmail').and.returnValue(Observable.from([{status: 200}]));
       component.onSubmit({});
