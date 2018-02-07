@@ -15,3 +15,9 @@ a{
 a:hover{
   color: lightgrey;
 }
+
+@media (min-width: 576px) {
+  .card-title{
+    text-align: center;
+  }
+}
