@@ -29,7 +29,7 @@ describe('ContactComponent', () => {
         { provide: ContactService, useValue: service }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -82,8 +82,8 @@ describe('ContactComponent', () => {
     it('should make name control invalid by not matching regex', () => {
       spyOn(validationService, 'emailValidator').and.callFake((control) => {
         if (control.value.match(/[0-9]/)) {
-            return {invalidName: true};
-          }
+          return {invalidName: true};
+        }
       });
       const name = component.contactForm.get('name');
       name.setValue('8');
@@ -92,10 +92,22 @@ describe('ContactComponent', () => {
   });
 
   describe('onSubmit', () => {
-    it('should call sendEmail method on ContactService', () => {
-      const spyService = spyOn(service, 'sendEmail').and.returnValue(Observable.empty());
-      component.onSubmit({});
-      expect(spyService).toHaveBeenCalled();
+    const dummyMessage = {
+      name: 'message obj name',
+      email: 'message@obj.email',
+      message: 'message obj message'
+    };
+
+    it('should call onSubmit() with message object', () => {
+      const spy = spyOn(component, 'onSubmit').and.returnValue(Observable.empty());
+      component.onSubmit(dummyMessage);
+      expect(spy).toHaveBeenCalledWith(dummyMessage);
+    });
+
+    it('should call sendEmail method on ContactService with param', () => {
+      const spy = spyOn(service, 'sendEmail').and.returnValue(Observable.empty());
+      component.onSubmit(dummyMessage);
+      expect(spy).toHaveBeenCalledWith(dummyMessage);
     });
 
     it('should set \'status\' value', () => {
