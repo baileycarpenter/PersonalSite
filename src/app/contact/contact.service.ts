@@ -9,11 +9,7 @@ export class ContactService {
 
   sendEmail(queryObject: any) {
     const body = JSON.stringify(queryObject);
-    return this.http.post('https://keilcarpenter-portfolio-api.herokuapp.com/api/sendemail', body, {observe: 'response'});
-  }
-
-  sendEemail(queryObject: any) {
-    const body = JSON.stringify(queryObject);
-    return this.http.post('https://keilcarpenter-portfolio-api.herokuapp.com/api/sendemail', body, {observe: 'response'});
+    const headers = new HttpHeaders({'Content-Type' : 'application/json'});
+    return this.http.post('https://keilcarpenter-portfolio-api.herokuapp.com/api/sendemail', body, {headers: headers, observe: 'response'});
   }
 }
