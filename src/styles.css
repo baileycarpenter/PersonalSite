@@ -4,6 +4,10 @@ body, html{
   overflow-x: hidden;
 }
 
+body .modal-open{
+
+}
+
 .container-lg{
   max-width: 1012px;
   margin-right: auto;
