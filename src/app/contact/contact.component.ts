@@ -25,6 +25,12 @@ export class ContactComponent {
     this.router.navigate(['../']);
   }
 
+  getClass(){
+    if(!this.contactForm.valid){
+      return 'disabled';
+    }
+  }
+
   createForm(){
     this.status = null;
     this.formIsProcessing = false;
@@ -44,11 +50,16 @@ export class ContactComponent {
   }
 
   onSubmit(message: object) {
-    this.formIsProcessing = true;
-    this.contactService.sendEmail(message).subscribe(
-      (data: HttpResponse<boolean>) => {this.handleResponse(data)},
-      (err: Error) => {this.handleError(err)}
-    );
+    if(this.contactForm.valid){
+      this.formIsProcessing = true;
+
+      this.contactService.sendEmail(message).subscribe(
+        (data: HttpResponse<boolean>) => {this.handleResponse(data)},
+        (err: Error) => {this.handleError(err)}
+      );
+    }else{
+      console.log('form is invalid');
+    }
   }
 
   handleError(err: Error){
