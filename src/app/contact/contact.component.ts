@@ -21,17 +21,17 @@ export class ContactComponent {
     this.createForm();
   }
 
-  onReset(){
-    this.router.navigate(['../']);
+  clearForm() {
+    this.createForm();
   }
 
-  getClass(){
-    if(!this.contactForm.valid){
+  getClass() {
+    if (!this.contactForm.valid) {
       return 'disabled';
     }
   }
 
-  createForm(){
+  createForm() {
     this.status = null;
     this.formIsProcessing = false;
     this.contactForm = this.formBuilder.group({
@@ -50,23 +50,22 @@ export class ContactComponent {
   }
 
   onSubmit(message: object) {
-    if(this.contactForm.valid){
+    if (this.contactForm.valid) {
       this.formIsProcessing = true;
-
       this.contactService.sendEmail(message).subscribe(
-        (data: HttpResponse<boolean>) => {this.handleResponse(data)},
-        (err: Error) => {this.handleError(err)}
+        (data: HttpResponse<boolean>) => {this.handleResponse(data); },
+        (err: Error) => {this.handleError(err); }
       );
-    }else{
+    } else {
       console.log('form is invalid');
     }
   }
 
-  handleError(err: Error){
+  handleError(err: Error) {
     console.log('An error occurred: ', err);
   }
 
-  handleResponse(data){
+  handleResponse(data) {
     this.data = data;
     this.status = data.status;
   }
