@@ -34,7 +34,7 @@
         <div class="col-md-8">
           <div class="form-buttons float-left">
             <button type="submit" name="submit" id="submit" class="btn btn-lg btn-success" [class]="'btn btn-lg btn-success ' + getClass()" [disabled]="!contactForm.valid" >Send</button>
-            <button type="button" (click)="onReset()" class="btn btn-lg btn-secondary">Cancel</button>
+            <button type="button" (click)="clearForm()" class="btn btn-lg btn-secondary">Clear</button>
           </div>
           <div class="processing-svg float-right" *ngIf="formIsProcessing == true">
             <img class=" message-sending" src="/assets/images/contact/Blocks(1).svg"/>
