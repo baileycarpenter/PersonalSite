@@ -4,8 +4,9 @@ body, html{
   overflow-x: hidden;
 }
 
-body .modal-open{
-
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
 }
 
 .container-lg{
