@@ -1,48 +1,27 @@
-/*
-import {async, inject, TestBed} from '@angular/core/testing';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import {ContactService} from './contact.service';
+import { TestBed, inject } from '@angular/core/testing';
+
+import { ContactService } from './contact.service';
+
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {HttpResponse, HttpClient, HttpHeaders} from '@angular/common/http';
 
 describe('ContactService', () => {
-
-  let httpMock: HttpTestingController;
-
-  beforeEach(async(() => {
-    // service stubs for testing
-    const contactServiceStub = () => {
-      return {
-        status: 'ok'
-      };
-    };
-
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      schemas: [ NO_ERRORS_SCHEMA ],
-      imports: [ HttpClientTestingModule ],
-      providers: [
-        { provide: ContactService, useValue: contactServiceStub }
-      ]
-    })
-      .compileComponents();
+      imports: [HttpClientTestingModule],
+      providers: [ContactService]
+    });
+  });
+
+  it('should be created', inject([ContactService], (service: ContactService) => {
+    expect(service).toBeTruthy();
   }));
 
-  beforeEach(
-    async(
-      inject([HttpTestingController], _httpMock => {
-        httpMock = _httpMock;
-      })
+  it('should send POST',
+    inject(
+      [HttpTestingController, ContactService],
+      (httpMock: HttpTestingController, contactService: ContactService) => {
+        
+      }
     )
   );
-
-  afterEach(
-    inject([HttpTestingController], (httpMock: HttpTestingController) => {
-      httpMock.verify();
-    })
-  );
-
-  it('should call onSubmit', () => {
-
-  });
 });
-*/
