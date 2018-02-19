@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-body, html{
-  max-width: 100%;
+body{
   overflow-x: hidden;
 }
 
 body.modal-open {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 
 .container-lg{
