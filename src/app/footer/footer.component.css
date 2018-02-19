@@ -38,6 +38,7 @@ ul{
 
 .footer-link:hover{
   color: #fff;
+  text-decoration: none;
 }
 
 p.intro {
